@@ -1,0 +1,76 @@
+
+source_table:
+  name: ANL_FACT_OSM_STOREPRODUCT 
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: ANL_FACT_OSM_STOREPRODUCT_1
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  ITEM_KEY: 
+    source_field: ITEM_KEY
+    
+  STORE_KEY: 
+    source_field: STORE_KEY
+    
+  VENDOR_KEY: 
+    source_field: VENDOR_KEY
+    
+  RETAILER_KEY: 
+    source_field: RETAILER_KEY
+    
+  SPCURRTRAITEDSTOREITEMCOMB: 
+    source_field: SPCURRTRAITEDSTOREITEMCOMB
+    
+  SPCURRVALIDSTOREITEMCOMB: 
+    source_field: SPCURRVALIDSTOREITEMCOMB
+    
+  AVGRSDEMANDWEEKLY: 
+    source_field: AVGRSDEMANDWEEKLY
+    
+  DSD_IND: 
+    source_field: DSD_IND
+    
+  SPCURRCLASSIFICATIONCODE: 
+    source_field: SPCURRCLASSIFICATIONCODE
+    
+  SPCURRAVGRSDEMAND: 
+    source_field: SPCURRAVGRSDEMAND
+    
+  SPCURRAVGPRICE: 
+    source_field: SPCURRAVGPRICE
+    
+  SPCURRDD: 
+    source_field: SPCURRDD
+    
+  RSINVENTORY: 
+    source_field: RSINVENTORY
+    
+  SPCURRRETAILONHAND: 
+    source_field: SPCURRRETAILONHAND
+    
+  DAYSSINCEGROSSSHIP: 
+    source_field: DAYSSINCEGROSSSHIP
+    
+  DAYSSINCEPOS: 
+    source_field: DAYSSINCEPOS
+    
+  SPCURRAVGPRICE: 
+    source_field: SPCURRAVGPRICE
+    
+  ITEMNUMBER: 
+    source_field: ITEMNUMBER
+    
+  SPCURRPOSENDDATE: 
+    source_field: SPCURRPOSENDDATE
+    
+where: store_key IN (36750006)
+
+field_delimiter: '|'
+
+out_file: d:/Work/tools/data_mover/data/ANL_FACT_OSM_STOREPRODUCT.csv

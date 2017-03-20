@@ -1,0 +1,40 @@
+
+source_table:
+  name: SPD_FACT_PIVOT_SCI 
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: SPD_FACT_PIVOT_SCI
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  VENDOR_KEY:
+    source_field: VENDOR_KEY
+  RETAILER_KEY: 
+    source_field: RETAILER_KEY
+  ITEM_KEY: 
+    source_field: ITEM_KEY
+  STORE_KEY:
+    source_field: STORE_KEY
+  PERIOD_KEY: 
+    source_field: PERIOD_KEY
+  SUBVENDOR_ID_KEY: 
+    source_field: SUBVENDOR_ID_KEY
+  REQUEST_DATE:
+    source_field: REQUEST_DATE
+  EVENT_KEY:
+    source_field: EVENT_KEY
+  DC_KEY:
+    source_field: DC_KEY
+  Archived Store In Transit Qty: 
+    source_field: "Archived Store In Transit Qty"
+    
+where: store_key = 39000060
+
+field_delimiter: '|'
+
+out_file: d:/SPD_FACT_PIVOT_SCI.csv

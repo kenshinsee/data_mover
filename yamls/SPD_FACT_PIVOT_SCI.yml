@@ -1,0 +1,22 @@
+
+source_table:
+  name: SPD_FACT_PIVOT_SCI 
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: SPD_FACT_PIVOT_SCI
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  <all_fields>: 
+    source_field: <all_fields>
+    
+where: store_key IN (36750006)
+
+field_delimiter: '|'
+
+out_file: D:/Work/tools/data_mover/data/SPD_FACT_PIVOT_SCI.csv

@@ -1,0 +1,74 @@
+
+source_table:
+  name: ANL_FACT_OSM_INCIDENTS 
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: ANL_FACT_OSM_INCIDENTS
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  Vendor_key: 
+    source_field: Vendor_key
+
+  Retailer_Key: 
+    source_field: Retailer_Key
+
+  ItemNumber: 
+    source_field: ItemNumber
+
+  Store_Key: 
+    source_field: Store_Key
+
+  Period_Key: 
+    source_field: Period_Key
+    
+  FirstPublishDate: 
+    source_field: FirstPublishDate
+    
+  LastPublishDate: 
+    source_field: LastPublishDate
+    
+  ClosureType: 
+    source_field: ClosureType
+    
+  ResponseId: 
+    source_field: ResponseId
+  
+  IssuanceId: 
+    source_field: IssuanceId
+    
+  InterventionKey: 
+    source_field: InterventionKey
+
+  DaysSincePOS: 
+    source_field: DaysSincePOS
+    
+  AlertLostSalesToDate: 
+    source_field: AlertLostSalesToDate
+    
+  DaysSinceGS: 
+    source_field: DaysSinceGS
+    
+  RetailOnHand: 
+    source_field: RetailOnHand
+    
+  RSInventory: 
+    source_field: RSInventory
+    
+  AvgRSDemand: 
+    source_field: AvgRSDemand
+    
+  AvgPrice: 
+    source_field: AvgPrice
+    
+where: store_key IN (36750006)
+
+field_delimiter: '|'
+
+out_file: d:/Work/tools/data_mover/data/ANL_FACT_OSM_INCIDENTS.csv
+

@@ -1,0 +1,21 @@
+
+source_table:
+  name: RETAILER
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: RETAILER
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  <all_fields>: 
+    source_field: <all_fields>
+    
+
+field_delimiter: '|'
+
+out_file: d:/Work/tools/data_mover/data/RETAILER.csv

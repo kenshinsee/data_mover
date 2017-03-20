@@ -1,0 +1,64 @@
+
+source_table:
+  name: OLAP_ITEM 
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: OLAP_ITEM
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  VENDOR_KEY:
+    source_field: VENDOR_KEY
+  ITEM_KEY: 
+    source_field: ITEM_KEY
+  UPC:
+    source_field: UPC
+  RS_ACTIVE:
+    source_field: RS_ACTIVE
+  CASE_CONVERSION:
+    source_field: CASE_CONVERSION
+  VALID_REPLENISH_ITEM:
+    source_field: VALID_REPLENISH_ITEM
+  VENDOR_PACK_QTY:
+    source_field: VENDOR_PACK_QTY
+  ITEM_GROUP:
+    source_field: ITEM_GROUP
+  ITEM_DESCRIPTION:
+    source_field: ITEM_DESCRIPTION
+  ITEM_COST:
+    source_field: ITEM_COST
+  ITEM_NBR:
+    source_field: ITEM_NBR
+  ITEM_STATUS:
+    source_field: ITEM_STATUS
+  ITEM_TYPE:
+    source_field: ITEM_TYPE
+  MDSE_CATEGORY:
+    source_field: MDSE_CATEGORY
+  UNIT_COST:
+    source_field: UNIT_COST
+  UNIT_RETAIL:
+    source_field: UNIT_RETAIL
+  VENDOR_STK_NBR:
+    source_field: VENDOR_STK_NBR
+  VNPK_QTY:
+    source_field: VNPK_QTY
+  WHPK_QTY:
+    source_field: WHPK_QTY
+  WHSE_ALIGN_DESCRIPTION:
+    source_field: WHSE_ALIGN_DESCRIPTION
+  DSD_IND:
+    source_field: DSD_IND
+  VNPK_COST:
+    source_field: VNPK_COST
+  
+    
+
+field_delimiter: '|'
+
+out_file: d:/Work/tools/data_mover/data/OLAP_ITEM.csv

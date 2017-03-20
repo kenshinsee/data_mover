@@ -1,0 +1,47 @@
+
+source_table:
+  name: OLAP_DC 
+  type: vertica
+  silo_id: WM_SALES_SUPPLYCHAIN_US_PEPSICO
+  silo_server: PRODP1ASDBC1A.PROD.RSICORP.LOCAL\DB6
+  
+target_table:
+  name: OLAP_DC
+  type: vertica
+  silo_id: PEPSICO_WMSSC_VICKY
+  silo_server: 10.172.36.55\db1
+  
+columns:
+  DC_KEY:
+    source_field: DC_KEY
+  DC_ID:
+    source_field: DC_ID
+  DC_NAME:
+    source_field: DC_NAME
+  DC_RETAILER_KEY:
+    source_field: DC_RETAILER_KEY
+  STATE:
+    source_field: STATE
+  ZIP:
+    source_field: ZIP
+  CITY:
+    source_field: CITY
+  WHSE_CITY:
+    source_field: WHSE_CITY
+  WHSE_NAME:
+    source_field: WHSE_NAME
+  DC_NBR:
+    source_field: DC_NBR
+  WHSE_NBR:
+    source_field: WHSE_NBR
+  WHSE_STATE:
+    source_field: WHSE_STATE
+  WHSE_STREET_ADDRESS:
+    source_field: WHSE_STREET_ADDRESS
+  WHSE_ZIP_CODE:
+    source_field: WHSE_ZIP_CODE
+
+    
+field_delimiter: '|'
+
+out_file: d:/Work/tools/data_mover/data/OLAP_DC.csv
